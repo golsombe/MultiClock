@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="ClockWord" parent="android:Widget.TextView">
+        <item name="android:textSize">16pt</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">#171717</item>
+    </style>
+</resources>

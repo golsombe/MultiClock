@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/textView1_6"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1_5"
+        android:text="HALF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="39dp"
+        android:paddingBottom="10dp"
+        android:text="IT" />
+     <TextView
+        android:id="@+id/textView1_4"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="F" />
+     <TextView
+        android:id="@+id/textView1_7"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1_3"
+        android:text="C" />
+     
+    <TextView
+        android:id="@+id/textView1_5"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1_7"
+        android:text="TEN" />
+
+    <TextView
+        android:id="@+id/textView1_3"
+        style="@style/ClockWord"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1_4"
+        android:text="IS" />
+
+    <TextView
+        android:id="@+id/tv_2_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="TWENTY" />
+
+    <TextView
+        android:id="@+id/tv_2_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_2_2"
+        android:layout_toRightOf="@+id/tv_2_2"
+        android:paddingBottom="10dp"
+        android:text="QUARTER" />
+
+    <TextView
+        android:id="@+id/tv_3_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_2_2"
+        android:paddingBottom="10dp"        
+        android:text="FIVE" />
+
+    <TextView
+        android:id="@+id/tv_3_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_3_1"
+        android:layout_toRightOf="@+id/tv_3_1"
+        android:text="C" />
+    <TextView
+        android:id="@+id/tv_3_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_3_1"
+        android:layout_toRightOf="@+id/tv_3_2"
+        android:text="PAST" />
+    <TextView
+        android:id="@+id/tv_3_4"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_3_1"
+        android:layout_toRightOf="@+id/tv_3_3"
+        android:text="TSEH" />
+    <TextView
+        android:id="@+id/tv_4_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_3_1"
+        android:paddingBottom="10dp"        
+        android:text="TIL" /> 
+    <TextView
+        android:id="@+id/tv_4_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_4_1"
+        android:layout_toRightOf="@+id/tv_4_1"
+        android:text="AB" />
+    <TextView
+        android:id="@+id/tv_4_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_4_1"
+        android:layout_toRightOf="@+id/tv_4_2"
+        android:text="ONE" />
+    <TextView
+        android:id="@+id/tv_4_4"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_4_1"
+        android:layout_toRightOf="@+id/tv_4_3"
+        android:text="TG" />
+    <TextView
+        android:id="@+id/tv_4_5"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_4_1"
+        android:layout_toRightOf="@+id/tv_4_4"
+        android:text="TWO" />    
+    <TextView
+        android:id="@+id/tv_5_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_4_1"
+        android:paddingBottom="10dp"        
+        android:text="THREE" />
+    <TextView
+        android:id="@+id/tv_5_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_5_1"
+        android:layout_toRightOf="@+id/tv_5_1"
+        android:text="FOUR" />
+    <TextView
+        android:id="@+id/tv_5_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_5_1"
+        android:layout_toRightOf="@+id/tv_5_2"
+        android:text="FIVE" />   
+    <TextView
+        android:id="@+id/tv_6_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_5_1"
+        android:paddingBottom="10dp"        
+        android:text="SIX" />
+    <TextView
+        android:id="@+id/tv_6_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_6_1"
+        android:layout_toRightOf="@+id/tv_6_1"
+        android:text="SEVEN" />
+    <TextView
+        android:id="@+id/tv_6_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_6_1"
+        android:layout_toRightOf="@+id/tv_6_2"
+        android:text="EIGHT" />
+    <TextView
+        android:id="@+id/tv_7_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_6_1"
+        android:paddingBottom="10dp"        
+        android:text="NINE" />
+    <TextView
+        android:id="@+id/tv_7_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_7_1"
+        android:layout_toRightOf="@+id/tv_7_1"
+        android:text="TEN" />
+    <TextView
+        android:id="@+id/tv_7_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_7_1"
+        android:layout_toRightOf="@+id/tv_7_2"
+        android:text="ELEVEN" />     
+    <TextView
+        android:id="@+id/tv_8_1"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView1"
+        android:layout_below="@+id/tv_7_1"
+        android:text="TWELVE" />
+    <TextView
+        android:id="@+id/tv_8_2"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_8_1"
+        android:layout_toRightOf="@+id/tv_8_1"
+        android:text="L" />
+    <TextView
+        android:id="@+id/tv_8_3"
+        style="@style/ClockWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_8_1"
+        android:layout_toRightOf="@+id/tv_8_2"
+        android:text="OCLOCK" />
+    <TextView
+        android:id="@+id/tv_showtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Waiting..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+    </ViewSwitcher>
+
+</RelativeLayout>
