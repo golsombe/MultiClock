@@ -46,6 +46,7 @@ public final class R {
         public static final int TextView07=0x7f060021;
         public static final int TextView08=0x7f060022;
         public static final int TextView1=0x7f06002c;
+        public static final int button1=0x7f060042;
         public static final int imageView2=0x7f060017;
         public static final int tableRow1=0x7f060001;
         public static final int tableRow2=0x7f060008;
@@ -81,8 +82,7 @@ public final class R {
         public static final int tv_8_1=0x7f06003e;
         public static final int tv_8_2=0x7f06003f;
         public static final int tv_8_3=0x7f060040;
-        public static final int tv_showtime=0x7f060041;
-        public static final int viewSwitcher1=0x7f060042;
+        public static final int viewFlipper1=0x7f060041;
     }
     public static final class layout {
         public static final int binary=0x7f030000;

@@ -252,21 +252,24 @@
         android:layout_alignBaseline="@+id/tv_8_1"
         android:layout_toRightOf="@+id/tv_8_2"
         android:text="OCLOCK" />
-    <TextView
-        android:id="@+id/tv_showtime"
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_2_2" >
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textSize="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Waiting..."
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <ViewSwitcher
-        android:id="@+id/viewSwitcher1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
-    </ViewSwitcher>
+        android:text="Binary Clock>>"
+        android:onClick="ClickHandler"
+         />
 
 </RelativeLayout>

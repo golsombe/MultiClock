@@ -6,34 +6,65 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.format.Time;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 public class MultiClockActivity extends Activity {
     /** Called when the activity is first created. */
 	private Handler h = new Handler();
 	private Time tm = new Time();
+	private ViewFlipper vflip = new ViewFlipper(this);
+	private Runnable curLayout = new Runnable() {public void run() {}};
+	private View curContent = new View(this);
 	@Override
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.binary);
+        curContent = findViewById(R.layout.main);
+        setContentView(curContent);
+        curLayout = mUpdateClock;
+        Button btn = (Button)findViewById(R.id.button1);
+        vflip.addView(findViewById(R.layout.binary));
+        vflip.setInAnimation(this, android.R.anim.fade_in);
+        vflip.setOutAnimation(this, android.R.anim.fade_out);
     }
     
     protected void onStart() {
 	   	super.onStart();
-    	setContentView(R.layout.binary);
-    	TableLayout tb = new TableLayout(this);
-    	h.removeCallbacks(mUpdateBinary);
-    	h.postDelayed(mUpdateBinary, 1000);
+    	setContentView(curContent);
+    	h.removeCallbacks(curLayout);
+    	h.postDelayed(curLayout, 1000);
     }
 
+    public void ClickHandler(View v) {
+    	vflip.setFlipInterval(1000);
+    	vflip.startFlipping();
+    	if(curLayout == mUpdateBinary)
+    	{
+    		curLayout = mUpdateClock;
+    	}
+    	else
+    	{
+    		curLayout = mUpdateBinary;
+    	}
+    	if(curContent == findViewById(R.layout.main)) {
+    		curContent = findViewById(R.layout.binary);
+    	}
+    	else {
+    		curContent = findViewById(R.layout.main);
+    	}
+ 
+    }
+    
     protected void onResume() {
     	super.onResume();
-    	setContentView(R.layout.binary);
-    	h.removeCallbacks(mUpdateBinary);
-    	h.postDelayed(mUpdateBinary, 1000);
+    	setContentView(curContent);
+    	h.removeCallbacks(curLayout);
+    	h.postDelayed(curLayout, 1000);
     }
 
     private void setBinaryClock() {
@@ -497,8 +528,8 @@ public class MultiClockActivity extends Activity {
     private Runnable mUpdateClock = new Runnable() { 
     	public void run() {
     		tm.setToNow();
-    		TextView tx = (TextView)findViewById(R.id.tv_showtime);
-    		tx.setText(tm.format("%a %I:%M:%S"));
+    		//TextView tx = (TextView)findViewById(R.id.tv_showtime);
+    		//tx.setText(tm.format("%a %I:%M:%S"));
     		setClockColor();
     		h.removeCallbacks(mUpdateClock);
         	h.postDelayed(mUpdateClock, 60000);
