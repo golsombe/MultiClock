@@ -24,6 +24,7 @@ public class MultiClockActivity extends Activity {
     protected void onStart() {
 	   	super.onStart();
     	setContentView(R.layout.binary);
+    	TableLayout tb = new TableLayout(this);
     	h.removeCallbacks(mUpdateBinary);
     	h.postDelayed(mUpdateBinary, 1000);
     }
