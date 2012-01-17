@@ -17,27 +17,27 @@ public class MultiClockActivity extends Activity {
     /** Called when the activity is first created. */
 	private Handler h = new Handler();
 	private Time tm = new Time();
-	private ViewFlipper vflip = new ViewFlipper(this);
-	private Runnable curLayout = new Runnable() {public void run() {}};
-	private View curContent = new View(this);
+	private ViewFlipper vflip;
+	private Runnable curLayout;
+	private int curContent;
 	@Override
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        curContent = findViewById(R.layout.main);
+        curContent = R.layout.main;
         setContentView(curContent);
-        curLayout = mUpdateClock;
+        //curLayout = mUpdateClock;
         Button btn = (Button)findViewById(R.id.button1);
-        vflip.addView(findViewById(R.layout.binary));
+        vflip = (ViewFlipper)findViewById(R.id.viewFlipper1);
         vflip.setInAnimation(this, android.R.anim.fade_in);
         vflip.setOutAnimation(this, android.R.anim.fade_out);
     }
     
     protected void onStart() {
 	   	super.onStart();
-    	setContentView(curContent);
-    	h.removeCallbacks(curLayout);
-    	h.postDelayed(curLayout, 1000);
+    	setContentView(R.layout.main);
+    	h.removeCallbacks(mUpdateClock);
+    	h.postDelayed(mUpdateClock, 1000);
     }
 
     public void ClickHandler(View v) {
@@ -51,13 +51,20 @@ public class MultiClockActivity extends Activity {
     	{
     		curLayout = mUpdateBinary;
     	}
-    	if(curContent == findViewById(R.layout.main)) {
-    		curContent = findViewById(R.layout.binary);
+    	if(curContent == R.layout.main) {
+    		curContent = R.layout.binary;
     	}
     	else {
-    		curContent = findViewById(R.layout.main);
+    		curContent = R.layout.main;
     	}
- 
+    	setContentView(curContent);
+    	resetCallbacks();
+    	h.postDelayed(curLayout, 1000);
+     }
+    
+    private void resetCallbacks() {
+    	h.removeCallbacks(mUpdateBinary);
+    	h.removeCallbacks(mUpdateClock);
     }
     
     protected void onResume() {
